@@ -2,55 +2,81 @@ package ecommerce.model;
 
 public class Cliente {
 
-	private int id; 
-	private String nome;
-	private float preco;
-	private float pagar;
-	private float valorFinal;
-	public int getId() {
-		return id;
+	private int nomeCliente;
+	private int sobrenomeCliente;
+	private int cpfCliente;
+	private int telefone;
+	private int endereco;
+	private int dataNasc;
+	private int email;
+	private int senha;
+	private int idCliente;
+	public Cliente(int nomeCliente, int sobrenomeCliente, int cpfCliente, int telefone, int endereco, int dataNasc,
+			int email, int senha, int idCliente) {
+		this.nomeCliente = nomeCliente;
+		this.sobrenomeCliente = sobrenomeCliente;
+		this.cpfCliente = cpfCliente;
+		this.telefone = telefone;
+		this.endereco = endereco;
+		this.dataNasc = dataNasc;
+		this.email = email;
+		this.senha = senha;
+		this.idCliente = idCliente;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public int getNomeCliente() {
+		return nomeCliente;
 	}
-	public String getNome() {
-		return nome;
+	public void setNomeCliente(int nomeCliente) {
+		this.nomeCliente = nomeCliente;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public int getSobrenomeCliente() {
+		return sobrenomeCliente;
 	}
-	public float getPreco() {
-		return preco;
+	public void setSobrenomeCliente(int sobrenomeCliente) {
+		this.sobrenomeCliente = sobrenomeCliente;
 	}
-	public void setPreco(float preco) {
-		this.preco = preco;
+	public int getCpfCliente() {
+		return cpfCliente;
 	}
-	public float getPagar() {
-		return pagar;
+	public void setCpfCliente(int cpfCliente) {
+		this.cpfCliente = cpfCliente;
 	}
-	public void setPagar(float pagar) {
-		this.pagar = pagar;
+	public int getTelefone() {
+		return telefone;
 	}
-	public float getValorFinal() {
-		return valorFinal;
+	public void setTelefone(int telefone) {
+		this.telefone = telefone;
 	}
-	public void setValorFinal(float valorFinal) {
-		this.valorFinal = valorFinal;
+	public int getEndereco() {
+		return endereco;
 	}
-	public Cliente(int id, String nome, float preco, float pagar, float valorFinal) {
-		this.id = id;
-		this.nome = nome;
-		this.preco = preco;
-		this.pagar = pagar;
-		this.valorFinal = valorFinal;
-		if (this.getPagar() < valorFinal) {
-				System.out.println("\nPagamento não efetuado!");
-			
-					
-				}
-			
-			}
-		}
+	public void setEndereco(int endereco) {
+		this.endereco = endereco;
+	}
+	public int getDataNasc() {
+		return dataNasc;
+	}
+	public void setDataNasc(int dataNasc) {
+		this.dataNasc = dataNasc;
+	}
+	public int getEmail() {
+		return email;
+	}
+	public void setEmail(int email) {
+		this.email = email;
+	}
+	public int getSenha() {
+		return senha;
+	}
+	public void setSenha(int senha) {
+		this.senha = senha;
+	}
+	public int getIdCliente() {
+		return idCliente;
+	}
+	public void setIdCliente(int idCliente) {
+		this.idCliente = idCliente;
+	}
 	
-	
+}
 

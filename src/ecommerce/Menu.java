@@ -3,6 +3,10 @@ package ecommerce;
 import java.util.Scanner;
 
 import projeto.util.Cores;
+import ecommerce.model.Carrinho;
+import ecommerce.model.Cliente;
+import ecommerce.model.Loja;
+import ecommerce.model.Produto;
 
 public class Menu {
 
@@ -27,7 +31,8 @@ public class Menu {
 		System.out.println("7 - Quem Somos");
 		
 		if(opcao == 7) {
-			System.out.println("\nLoja LhamasFofas");
+			System.out.println(Cores.TEXT_PURPLE_BOLD_BRIGHT + "\nLoja ⭐ LhamasFofas ⭐");
+			System.out.println(" ❤ Escolha a sua lhama de pelúcia para alegrar o seu dia! ❤" + Cores.TEXT_RESET);
 			leia.close();
 			System.exit(opcao);
 			switch (opcao) {
