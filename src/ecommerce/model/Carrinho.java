@@ -1,75 +1,58 @@
 package ecommerce.model;
-
-public class Carrinho {
-	int item;
-	int quantidade;
-	int codigoProduto;
-	int formaPagamento;
-	double desconto;
-	double precoProduto;
-	double pagar;
-	
-	public double getPagar() {
-		return pagar;
-	}
-	public void setPagar(double pagar) {
-		this.pagar = pagar;
-	}
-	public Carrinho(double pagar) {
-		this.pagar = pagar;
-	}
-	public int getItem() {
-		return item;
-	}
-	public void setItem(int item) {
-		this.item = item;
-	}
-	public double getDesconto() {
-		return desconto;
-	}
-	public void setDesconto(double desconto) {
-		this.desconto = desconto;
-	}
-	public double getPrecoProduto() {
-		return precoProduto;
-	}
-	public void setPrecoProduto(double precoProduto) {
-		this.precoProduto = precoProduto;
-	}
-	public int getQuantidade() {
-		return quantidade;
-	}
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
-	}
-	public int getCodigoProduto() {
-		return codigoProduto;
-	}
-	public void setCodigoProduto(int codigoProduto) {
-		this.codigoProduto = codigoProduto;
-	}
-	public int getformaPagamento(int formaPagamento) {
-		return formaPagamento;
-	}
-	public void setformaPagamento(int formaPagamento) {
-		this.formaPagamento = formaPagamento;		
-	}	
-	public boolean pagar(double precoProduto) {
-		if(this.getPagar() < precoProduto) {
-			System.out.println("\nPagamento não realizado!");
-			return false;
-		}
-		this.setPagar(this.getPagar() - precoProduto);
-		return true;
+import java.util.ArrayList;
+import java.util.List;
+public class Carrinho  extends Produto{
+	private List<Produto>itens;
+	public Carrinho(List<Produto> itens, int produto, float quantidade, int id) {
+		super();
+		this.itens = new ArrayList<>();
 	}
 	
-	public Carrinho(int item, double desconto, double precoProduto, int quantidade, int codigoProduto) {
-		this.item = item;
-		this.desconto = desconto;
-		this.precoProduto = precoProduto;
-		this.quantidade = quantidade;
-		this.codigoProduto = codigoProduto;
+	public void adicionarItem(Produto produto, float quantidade, int i) {
+		Carrinho item = new Carrinho(itens, id, quantidade, id);
+		itens.add(item);
 		
 	}
+	int produto;
+	private float quantidade;
+	int id;
 
-}
+	
+	public List<Produto> getItens() {
+		return itens;
+	}
+
+	public void setItens(List<Produto> itens) {
+		this.itens = itens;
+	}
+
+	public int getProduto() {
+		return produto;
+	}
+
+	public void setProduto(int produto) {
+		this.produto = produto;
+	}
+
+	public float getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(float quantidade) {
+		this.quantidade = quantidade;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	
+		this.itens = itens;
+		this.produto = produto;
+		this.quantidade = quantidade;
+		this.id = id;
+	}
+
+	}	
